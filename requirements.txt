@@ -1,9 +1,9 @@
 langchain
-langchain_groq
-langchain_community
-langchain_core
+langchain-groq
+langchain-community
+langchain-core
 streamlit
 langgraph
-faiss_cpu
-tavily_python
+faiss-cpu
+tavily-python
 
