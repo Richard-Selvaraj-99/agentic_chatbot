@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - "**.md"
+      
       - "screenshots/**"
       - "**.png"
       - "**.jpg"
@@ -14,7 +14,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - "**.md"
+      
       - "screenshots/**"
       - "**.png"
       - "**.jpg"
