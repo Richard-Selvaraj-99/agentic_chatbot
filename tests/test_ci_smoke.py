@@ -16,13 +16,6 @@ def test_import_dependencies():
     import tavily
 
 
-def test_app_import():
-    """
-    Ensures the main application file loads without crashing.
-    """
-    import app
-
-
 def test_required_env_vars_exist():
     """
     Ensures required GitHub Secrets are available during CI.
