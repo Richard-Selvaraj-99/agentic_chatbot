@@ -15,14 +15,18 @@ def test_import_dependencies():
     import streamlit
     import tavily
 
-"""""
+
 def test_app_import():
-   
+    """
+    Ensures the main application file loads without crashing.
+    """
     import app
 
 
 def test_required_env_vars_exist():
-   
+    """
+    Ensures required GitHub Secrets are available during CI.
+    """
     required_vars = [
         "DOCKER_PASSWORD",
         "DOCKER_USERNAME",
@@ -30,4 +34,4 @@ def test_required_env_vars_exist():
     ]
 
     for var in required_vars:
-        assert os.getenv(var) is not None, f"{var} is missing" """
+        assert os.getenv(var) is not None, f"{var} is missing"
