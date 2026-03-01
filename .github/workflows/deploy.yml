@@ -34,7 +34,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest || echo "No tests found"
+          pytest 
 
   # ──────────────────────────────────────────
   # JOB 2: Build & Push Docker (CD Part 1)
@@ -89,4 +89,5 @@ jobs:
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
           git remote add hf https://Richard9905:${HF_TOKEN}@huggingface.co/spaces/Richard9905/agentic_ai_web_chatbot
+          git rm -r --cached screenshots || true
           git push hf main --force
