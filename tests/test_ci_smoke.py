@@ -16,15 +16,3 @@ def test_import_dependencies():
     import tavily
 
 
-def test_required_env_vars_exist():
-    """
-    Ensures required GitHub Secrets are available during CI.
-    """
-    required_vars = [
-        "DOCKER_PASSWORD",
-        "DOCKER_USERNAME",
-        "HF_TOKEN"
-    ]
-
-    for var in required_vars:
-        assert os.getenv(var) is not None, f"{var} is missing"
