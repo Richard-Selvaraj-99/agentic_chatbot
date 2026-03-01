@@ -89,5 +89,7 @@ jobs:
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
           git remote add hf https://Richard9905:${HF_TOKEN}@huggingface.co/spaces/Richard9905/agentic_ai_web_chatbot
-          git rm -r --cached screenshots || true
+          rm -rf screenshots/
+          git add .
+          git commit -m "Internal: cleanup binaries for HF deployment" || echo "No changes to commit"
           git push hf main --force
