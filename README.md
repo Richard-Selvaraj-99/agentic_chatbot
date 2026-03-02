@@ -31,38 +31,47 @@ https://huggingface.co/spaces/Richard9905/agentic_ai_web_chatbot
 ##REQUIREMENTS
 
 
-###1.LIBRARIES AS WRITTEN IN  requirements.txt
+### 1.LIBRARIES AS WRITTEN IN  requirements.txt
 
 
-###2.create environment
+### 2.create environment
   -conda create -p  ./venv python ==3.13 -y
   -pip install -r requirements.txt
   -conda activate ./venv
 
 
-###3.create git repo using git CLI
+### 3.create git repo using git CLI
   -gh repo create
   -create rep name
   -select public or private (your choice)
   -create gitignore for python (type necessary files and folders to be avoided)
 
 
-###4. then git clone (https://github.com/Richard-Selvaraj-99/Agentic_AI_with_github_CI-CD_and_Huggingface_deployment/tree/main)
+### 4. then git clone (https://github.com/Richard-Selvaraj-99/Agentic_AI_with_github_CI-CD_and_Huggingface_deployment/tree/main)
 
 
-###5.In the terminal run (pytest) for locally testing the envrionment varaibles
+### .In the terminal run (pytest) for locally testing the envrionment varaibles
 
 
-###6.then create a hf link edit the deploy.yml with the right link 
+### 6.then create a hf link edit the deploy.yml with the right link 
 
 
-###8.In repo secrets upload HF_TOEKN , DOCKER_USERNAME, DOCKER_PASSWORD this creates a CI/CD pipline to the hugging face repo link and also pushes your docker image to docker hub so you can reproduce and even migrate this project in the future
+### 8.In repo secrets upload HF_TOEKN , DOCKER_USERNAME, DOCKER_PASSWORD this creates a CI/CD pipline to the hugging face repo link and also pushes your docker image to docker hub so you can reproduce and even migrate this project in the future
 
 
-###9.once the action workflow works go to the hf repo space link and select: 
+### 9.once the action workflow works go to the hf repo space link and select: 
    --basic chat bot for non-agentic workflow
    --chatbot with web for agentic workflow
 
 
 #screenshots
-![alt text](docker.png) ![alt text](error.png)
+![alt text](docker.png) 
+
+
+# warning!
+this error is to showcase that you need update the model name in accordance to the groq's provided LLM models  at https://console.groq.com/docs/models change the model accordingly at 
+
+src/langraphagenticai/ui/uiconfiggile.ini
+
+
+![alt text](error.png)
