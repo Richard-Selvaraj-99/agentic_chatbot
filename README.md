@@ -31,38 +31,75 @@ https://huggingface.co/spaces/Richard9905/agentic_ai_web_chatbot
 ##REQUIREMENTS
 
 
-### 1.LIBRARIES AS WRITTEN IN  requirements.txt
+## 🛠️ Requirements
 
+---
 
-### 2.create environment
-  -conda create -p  ./venv python ==3.13 -y
-  -pip install -r requirements.txt
-  -conda activate ./venv
+### 📦 1. Libraries
+All required libraries are listed in `requirements.txt`
 
+---
 
-### 3.create git repo using git CLI
-  -gh repo create
-  -create rep name
-  -select public or private (your choice)
-  -create gitignore for python (type necessary files and folders to be avoided)
+### 🐍 2. Create Environment
+```bash
+conda create -p ./venv python==3.13 -y
+pip install -r requirements.txt
+conda activate ./venv
+```
 
+---
 
-### 4. then git clone (https://github.com/Richard-Selvaraj-99/Agentic_AI_with_github_CI-CD_and_Huggingface_deployment/tree/main)
+### 🗂️ 3. Create GitHub Repo via CLI
+```bash
+gh repo create
+```
+- Enter your repo name
+- Select `public` or `private`
+- Add a `.gitignore` for Python (include any files/folders to exclude)
 
+---
 
-### .In the terminal run (pytest) for locally testing the envrionment varaibles
+### 🔗 4. Clone the Repo
+```bash
+git clone https://github.com/Richard-Selvaraj-99/Agentic_AI_with_github_CI-CD_and_Huggingface_deployment.git
+```
 
+---
 
-### 6.then create a hf link edit the deploy.yml with the right link 
+### 🧪 5. Run Tests Locally
+```bash
+pytest
+```
+> Verifies that all environment variables are configured correctly before pushing
 
+---
 
-### 8.In repo secrets upload HF_TOEKN , DOCKER_USERNAME, DOCKER_PASSWORD this creates a CI/CD pipline to the hugging face repo link and also pushes your docker image to docker hub so you can reproduce and even migrate this project in the future
+### 🤗 6. Configure HuggingFace Deployment
+- Create your HuggingFace Space
+- Update `deploy.yml` with your HF Space link
 
+---
 
-### 9.once the action workflow works go to the hf repo space link and select: 
-   --basic chat bot for non-agentic workflow
-   --chatbot with web for agentic workflow
+### 🔐 7. Add Repository Secrets
+Go to **Repo → Settings → Secrets and Variables → Actions** and add:
 
+| Secret | Description |
+|---|---|
+| `HF_TOKEN` | HuggingFace access token |
+| `DOCKER_USERNAME` | Docker Hub username |
+| `DOCKER_PASSWORD` | Docker Hub password |
+
+> This triggers the CI/CD pipeline — deploys to HuggingFace and pushes your Docker image to Docker Hub for future reproduction or migration
+
+---
+
+### 🚀 8. After Workflow Succeeds
+Go to your HuggingFace Space and select:
+
+| Option | Use Case |
+|---|---|
+| **Basic Chatbot** | Non-agentic workflow |
+| **Chatbot with Web Search** | Agentic workflow |
 
 #screenshots
 ![alt text](docker.png) 
